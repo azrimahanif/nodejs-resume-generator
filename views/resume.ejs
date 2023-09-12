@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= name %>'s Resume</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="resume-form">
+      <h1><%= name %>'s Resume</h1>
+        <!-- Personal Information -->
+        <div class="section">
+          <h2>Personal Information</h2>
+          <label for="name">Name: <%= name %></label>
+          <label for="location">Location: <%= location %></label>
+          <label for="occupation">Occupation: <%= occupation %></label>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+          <h2>Education</h2>
+          <div id="education-container">
+            <ul>
+              <% for (item of education){ %>
+                <li> <%= item %></li>
+              <% } %>
+            </ul>
+
+        </div>
+
+        <!-- Work Experience -->
+        <div class="section">
+          <h2>Work Experience</h2>
+          <div id="experience-container">
+            <ul>
+              <% for (item of experience){ %>
+                <li> <%= item %></li>
+              <% } %>
+            </ul>
+        </div>
+    </div>
+  </body>
+</html>
